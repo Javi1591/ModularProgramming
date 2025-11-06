@@ -62,7 +62,7 @@ Each Java file includes:
 
 ---
 
-## ⚙️ How to Compile and Run
+## How to Compile and Run
 
 ### Requirements
 - Java Development Kit (JDK) 17 or newer
