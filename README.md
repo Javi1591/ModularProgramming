@@ -1,76 +1,34 @@
-# Java Assignments 5 & 6 – Methods, Loops, and Modular Programming
+# COP2251 – Java Assignments 5 & 6
 
-Two Java console applications demonstrating the use of **methods**, **loops**, and **structured modular design**.  
-These assignments reinforce reusability, parameter passing, and iterative control structures to handle user-driven processes.
+## Summary
+These assignments emphasize modular design with overloaded methods and repetition structures. Assignment 5 implements multiple drawing utilities using nested loops and method overloading to render rectangles with various sizes and characters. Assignment 6 prints a formatted multiplication table using nested loops and alignment with `printf`.
 
----
+## Program Behavior
+- DrawShape (Assignment 5)
+  - Provides several overloaded `drawRectangle` methods:
+    - `drawRectangle(int sideLength)` – prints a square using `'+'` characters.
+    - `drawRectangle(int height, int width)` – prints a filled rectangle using `'X'`.
+    - `drawRectangle(int height, int width, char fillChar)` – prints a filled rectangle using a custom fill character.
+    - `drawRectangle(int height, int width, char borderChar, char fillChar)` – prints a rectangle with a border rendered by `borderChar` and interior filled by `fillChar`.
+  - `DrawShapeTest.main` calls each overload with sample dimensions to demonstrate the different outputs.
+- TimesTable (Assignment 6)
+  - Prints a “Multiplication Table” heading.
+  - Uses nested `for` loops to display products between 1..9.
+  - Applies simple parity checks to control which rows/columns are printed and uses `System.out.printf("%4d", value)` to align the table output.
 
-## Assignment 5 – Methods and Parameter Passing
-
-### Description
-A Java program that introduces user-defined methods to perform calculations or formatted operations.  
-It demonstrates the use of **value-returning methods**, **void methods**, and **parameter passing** to modularize functionality.
-
-### Features
-- Defines multiple reusable methods for computation or output formatting.  
-- Demonstrates both **value-returning** and **void** method types.  
-- Accepts and passes parameters to methods for flexible data handling.  
-- Organizes logic for readability and maintainability.  
-- May include mathematical, string, or menu-based operations.
-
-### Learning Objectives
-- Understand how to define and call custom methods in Java.  
-- Practice scope and lifetime of local variables.  
-- Differentiate between returning and non-returning methods.  
-- Reinforce the concept of modular programming.
-
-### Files
-- `Nazario_Assignment5.java` (example filename) – complete source file implementing Assignment 5.
-
----
-
-## Assignment 6 – Loops and Repetition Structures
-
-### Description
-A Java console application that performs repetitive operations using **for**, **while**, and/or **do-while** loops.  
-The program may involve accumulating totals, generating tables, or performing repetitive calculations until a user chooses to stop.
-
-### Features
-- Demonstrates use of:
-  - `for` loops for counted iteration.  
-  - `while` or `do-while` loops for conditional repetition.  
-- Integrates input validation within loops.  
-- Optionally uses **nested loops** for tabular output.  
-- Displays results with structured formatting and summaries.
-
-### Learning Objectives
-- Apply looping constructs to perform repetitive tasks.  
-- Integrate control flow and condition-based repetition.  
-- Practice incremental calculations and iterative problem solving.
-
-### Files
-- `Nazario_Assignment6.java` (example filename) – complete implementation for Assignment 6.
-
----
-
-## Program Structure
-Each Java file includes:
-- Header comment (author, date, description).  
-- Organized indentation and descriptive variable names.  
-- A single `main()` method that coordinates calls to additional helper methods.  
-- Clear separation of logic, input, processing, and output.
-
----
+## Key Concepts Demonstrated
+- Method Overloading: Multiple `drawRectangle` signatures for different rendering requirements.
+- Nested Loops: Outer/inner `for` loops to iterate rows and columns in ASCII-art shapes and multiplication tables.
+- Console Formatting: `System.out.printf` with width specifiers for aligned columns.
+- Package and Module Layout: Source under `package nazario5and6` with a simple `module-info.java`.
+- Basic API Design: Separating a utility class (`DrawShape`) from a driver/test class (`DrawShapeTest`).
 
 ## How to Compile and Run
+Requirements:
+- Java Development Kit (JDK) 17 or later
+- Command line terminal or IDE (IntelliJ IDEA, Eclipse, or VS Code)
 
-### Requirements
-- Java Development Kit (JDK) 17 or newer
-
-### Command Line Instructions
-```bash
-javac Nazario_Assignment5.java
-java Nazario_Assignment5
-
-javac Nazario_Assignment6.java
-java Nazario_Assignment6
+Commands (from the `nazario5and6/src` directory):
+javac -d ../out module-info.java nazario5and6/DrawShape.java nazario5and6/DrawShapeTest.java nazario5and6/TimesTable.java  
+java -cp ../out nazario5and6.DrawShapeTest  
+java -cp ../out nazario5and6.TimesTable
