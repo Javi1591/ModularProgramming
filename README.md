@@ -5,7 +5,7 @@ These assignments reinforce reusability, parameter passing, and iterative contro
 
 ---
 
-## 📘 Assignment 5 – Methods and Parameter Passing
+## Assignment 5 – Methods and Parameter Passing
 
 ### Description
 A Java program that introduces user-defined methods to perform calculations or formatted operations.  
@@ -29,7 +29,7 @@ It demonstrates the use of **value-returning methods**, **void methods**, and **
 
 ---
 
-## 📗 Assignment 6 – Loops and Repetition Structures
+## Assignment 6 – Loops and Repetition Structures
 
 ### Description
 A Java console application that performs repetitive operations using **for**, **while**, and/or **do-while** loops.  
@@ -53,7 +53,7 @@ The program may involve accumulating totals, generating tables, or performing re
 
 ---
 
-## 🧩 Program Structure
+## Program Structure
 Each Java file includes:
 - Header comment (author, date, description).  
 - Organized indentation and descriptive variable names.  
